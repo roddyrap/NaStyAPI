@@ -1,5 +1,5 @@
-![PyPI - Python Version](https://img.shields.io/pypi/pyversions/NSapi)
 # NSapi
+![PyPI - Python Version](https://img.shields.io/pypi/pyversions/NSapi)
 A Python wrapper for the [NationStates](https://www.nationstates.net/) [api](https://www.nationstates.net/pages/api.html).<br/>
 <sub><sup>Note: The wrapper doesn't have rate regulation yet but it is planned.</sup></sub>
 

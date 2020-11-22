@@ -3,7 +3,7 @@ from setuptools import setup
 with open("README.md", "r") as fh:
     long_description = fh.read()
 setup(
-    name='NSapi',
+    name='NS-Api',
     version='0.1',
     packages=['NSapi'],
     url='',
