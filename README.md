@@ -54,7 +54,7 @@ To use the Trading Cards api you must first import the module that deals with it
 ```python
 from NSapi import World
 ```
-This api lets you get information about Trading cards.
+This api lets you get information about the World.
 
 ## How to contribute
 Don't, or at least, not yet. I am still working on the basics of the package, and contributions aren't needed yet.
