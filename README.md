@@ -24,35 +24,35 @@ The NationState API is divided into parts, and so is the wrapper.
 ### Nation
 To use the Nations api you must first import the module that deals with it, as such: 
 ```python
-from NSapi import Nation
+from NaStAPI import Nation
 ```
 This api lets you get statistics for specific countries, and to make commands to your own country. See the docs for more information.
 
 ### Region
 To use the Regions api you must first import the module that deals with it, as such: 
 ```python
-from NSapi import Region
+from NaStAPI import Region
 ```
 This api lets you get statistics for specific regions.
 
 ### Telegrams
 To use the Telegrams api you must first import the module that deals with it, as such: 
 ```python
-from NSapi import Telegrams
+from NaStAPI import Telegrams
 ```
 This api lets you get statistics for specific regions.
 
 ### Trading Cards
 To use the Trading Cards api you must first import the module that deals with it, as such: 
 ```python
-from NSapi import TradingCards
+from NaStAPI import TradingCards
 ```
 This api lets you get information about Trading cards.
 
 ### World
 To use the Trading Cards api you must first import the module that deals with it, as such: 
 ```python
-from NSapi import World
+from NaStAPI import World
 ```
 This api lets you get information about the World.
 
