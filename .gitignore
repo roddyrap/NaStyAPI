@@ -1,0 +1,7 @@
+﻿tests/
+dist
+build
+NSapi.egg-info
+.idea
+__pycache__
+main.py
