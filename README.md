@@ -1,5 +1,7 @@
 # NaStyAPI - A NationState wrapper
-![PyPi status](https://github.com/Nimi142/NaStyAPI/workflows/PyPi%20status/badge.svg)<br/>
+![PyPi status](https://github.com/Nimi142/NaStyAPI/workflows/PyPi%20status/badge.svg)
+[![Documentation Status](https://readthedocs.org/projects/nastyapi/badge/?version=latest)](https://nastyapi.readthedocs.io/en/latest/?badge=latest)
+<br/>
 A Python wrapper for the [NationStates](https://www.nationstates.net/) [api](https://www.nationstates.net/pages/api.html).<br/>
 Works with a rate limit so as not to exceed NationState's API's rate limit.<br/>  
 [GitHub Link](https://github.com/Nimi142/NaStyAPI)
@@ -19,10 +21,10 @@ Works with a rate limit so as not to exceed NationState's API's rate limit.<br/>
 
 ## Installation
 The package is available on PyPi! simply write:<br/>
-```pip install NaSty```
+```pip install NaStyAPI```
 
 ## Documentation
-Planned...
+Trying to use readthedocs, doesn't function yet.
 
 ## General Use
 The NationState API is divided into parts, and so is the wrapper.
