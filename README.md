@@ -1,5 +1,5 @@
 # NaStyAPI - A NationState wrapper
-![PyPi status](https://github.com/Nimi142/NaStyAPI/workflows/PyPi%20status/badge.svg)
+![PyPi status](https://github.com/Nimi142/NaStyAPI/workflows/PyPi%20status/badge.svg)<br/>
 A Python wrapper for the [NationStates](https://www.nationstates.net/) [api](https://www.nationstates.net/pages/api.html).<br/>
 <sub><sup>Note: The wrapper doesn't have rate regulation yet but it is planned.</sup></sub>
 
@@ -7,6 +7,7 @@ A Python wrapper for the [NationStates](https://www.nationstates.net/) [api](htt
 - [NaStyAPI - A NationState wrapper](#nastyapi---a-nationstate-wrapper)
 - [Table of Contensts:](#table-of-contensts)
   - [Installation:](#installation)
+  - [Documentation](#documentation)
   - [Use:](#use)
     - [Nation](#nation)
     - [Region](#region)
@@ -16,9 +17,14 @@ A Python wrapper for the [NationStates](https://www.nationstates.net/) [api](htt
   - [How to contribute](#how-to-contribute)
 
 ## Installation:
-The package is available on PyPi!, simply write:
+The package is available on PyPi! simply write:<br/>
 ```pip install NaSty```
+
+## Documentation
+Planned...
+
 ## Use:
+<hr/>
 The NationState API is divided into parts, and so is the wrapper.
 
 
@@ -58,4 +64,5 @@ from NaStyAPI import World
 This api lets you get information about the World.
 
 ## How to contribute
-Don't, or at least, not yet. I am still working on the basics of the package, and contributions aren't helpful yet.
+Thank you for looking at this!
+There isn't all that much to do yet, so the best you can do to help is to use it!
