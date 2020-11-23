@@ -1,6 +1,5 @@
 # NaStyAPI - A NationState wrapper
 ![PyPi status](https://github.com/Nimi142/NaStyAPI/workflows/PyPi%20status/badge.svg)
-![Upload Python Package](https://github.com/Nimדi142/NS-Api/workflows/Upload%20Python%20Package/badge.svg)
 A Python wrapper for the [NationStates](https://www.nationstates.net/) [api](https://www.nationstates.net/pages/api.html).<br/>
 <sub><sup>Note: The wrapper doesn't have rate regulation yet but it is planned.</sup></sub>
 
