@@ -1,6 +1,6 @@
 ﻿tests/
 dist
-build
+./build
 NSapi.egg-info
 .idea
 __pycache__
