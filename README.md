@@ -1,67 +1,68 @@
 # NaStyAPI - A NationState wrapper
 ![PyPi status](https://github.com/Nimi142/NaStyAPI/workflows/PyPi%20status/badge.svg)<br/>
 A Python wrapper for the [NationStates](https://www.nationstates.net/) [api](https://www.nationstates.net/pages/api.html).<br/>
-<sub><sup>Note: The wrapper doesn't have rate regulation yet but it is planned.</sup></sub>
-
-# Table of Contensts:
+Works with a rate limit so as not to exceed NationState's API's rate limit.<br/>  
+[GitHub Link](https://github.com/Nimi142/NaStyAPI)
+## Table of Contensts:
 - [NaStyAPI - A NationState wrapper](#nastyapi---a-nationstate-wrapper)
-- [Table of Contensts:](#table-of-contensts)
-  - [Installation:](#installation)
+  - [Table of Contensts:](#table-of-contensts)
+  - [Installation](#installation)
   - [Documentation](#documentation)
-  - [Use:](#use)
-    - [Nation](#nation)
-    - [Region](#region)
-    - [Telegrams](#telegrams)
-    - [Trading Cards](#trading-cards)
-    - [World](#world)
+  - [General Use](#general-use)
+    - [Warning](#warning)
+    - [Examples](#examples)
+      - [Get a public shard on a nation](#get-a-public-shard-on-a-nation)
+      - [Log in to your nation](#log-in-to-your-nation)
+      - [Access to private shards](#access-to-private-shards)
+      - [Write a dispatch using the api](#write-a-dispatch-using-the-api)
   - [How to contribute](#how-to-contribute)
 
-## Installation:
+## Installation
 The package is available on PyPi! simply write:<br/>
 ```pip install NaSty```
 
 ## Documentation
 Planned...
 
-## Use:
-<hr/>
+## General Use
 The NationState API is divided into parts, and so is the wrapper.
+The parts are:
 
+- Nation
+- Region
+- Telegrams
+- TradingCards
+- World
+- WorldAssembly<br/>
 
-### Nation
-To use the Nations api you must first import the module that deals with it, as such: 
+To use a part, simply write:<br/>
+```python
+from NaStyAPI import Part
+```
+### Warning
+The wrapper is usable already, as you can see by the examples below. That, however, does not mean it's recommended to use.
+The wrapper is largely undocumented and is not yet great at managing errors. You can use it, but it's not going to be to pleasant.
+
+### Examples
+#### Get a public shard on a nation
 ```python
 from NaStyAPI import Nation
+Nation.get_shards("NATION_NAME",["SHARDS"])
 ```
-This api lets you get statistics for specific countries, and to make commands to your own country. See the docs for more information.
-
-### Region
-To use the Regions api you must first import the module that deals with it, as such: 
+#### Log in to your nation
 ```python
-from NaStyAPI import Region
+from NaStyAPI import Nation
+your_nation = Nation.Nation("NATION_NAME")
+your_nation.log_password("YOUR_PASSWORD")
 ```
-This api lets you get statistics for specific regions.
-
-### Telegrams
-To use the Telegrams api you must first import the module that deals with it, as such: 
+#### Access to private shards
 ```python
-from NaStyAPI import Telegrams
+your_nation.get_shards("YOUR_PRIVATE_SHARDS")
 ```
-This api lets you get statistics for specific regions.
-
-### Trading Cards
-To use the Trading Cards api you must first import the module that deals with it, as such: 
+#### Write a dispatch using the api
 ```python
-from NaStyAPI import TradingCards
+new_dispatch = your_nation.do_command("dispatch", additional_params={"dispatch": "add", "title": "YOUR POST TITLE", "text": "DISPATCH TEXT", "category": "CATEGORY_NUM", "subcategory": "SUBCATEGORY_NUM"})
 ```
-This api lets you get information about Trading cards.
-
-### World
-To use the Trading Cards api you must first import the module that deals with it, as such: 
-```python
-from NaStyAPI import World
-```
-This api lets you get information about the World.
 
 ## How to contribute
 Thank you for looking at this!
