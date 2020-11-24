@@ -3,9 +3,9 @@ from typing import Union, List
 from .APICall import call_api
 
 
-def get_trading_cards(season_number: int):
+def get_trading_cards(season_number: int, get_request: bool = False) -> Union[bytes, requests.request]:
     res = call_api(base_url=f"https://www.nationstates.net/pages/cardlist_S{season_number}.xml.gz")
-    return res.content
+    return res if get_request else res.content
 
 
 def get_info_on_card(card_name: str, shards: Union[List[str], str]) -> str:

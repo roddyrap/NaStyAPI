@@ -1,7 +1,9 @@
 ﻿tests/
 dist
-./build
+build
+docs/source/_build/
 NSapi.egg-info
 .idea
 __pycache__
 main.py
+.vscode/

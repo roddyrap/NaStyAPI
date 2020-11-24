@@ -2,8 +2,10 @@
 ![PyPi status](https://github.com/Nimi142/NaStyAPI/workflows/PyPi%20status/badge.svg)
 [![Documentation Status](https://readthedocs.org/projects/nastyapi/badge/?version=latest)](https://nastyapi.readthedocs.io/en/latest/?badge=latest)
 <br/>
+!Note: This package is still highly in development and is really not recommended for public use yet!<br/>
 A Python wrapper for the [NationStates](https://www.nationstates.net/) [api](https://www.nationstates.net/pages/api.html).<br/>
-Works with a rate limit so as not to exceed NationState's API's rate limit.<br/>  
+Works with a rate limit so as not to exceed NationState's API's rate limit.<br/>
+NaStyAPI only handles communication, it does not parse the result in any way!
 [GitHub Link](https://github.com/Nimi142/NaStyAPI)
 ## Table of Contensts:
 - [NaStyAPI - A NationState wrapper](#nastyapi---a-nationstate-wrapper)
@@ -24,8 +26,7 @@ The package is available on PyPi! simply write:<br/>
 ```pip install NaStyAPI```
 
 ## Documentation
-Trying to use readthedocs, doesn't function yet.
-
+[Link to full documentation (in progress)](https://nastyapi.readthedocs.io/en/stable/)
 ## General Use
 The NationState API is divided into parts, and so is the wrapper.
 The parts are:

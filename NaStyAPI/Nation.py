@@ -9,7 +9,7 @@ userAgent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML
 
 class Nation:
     """
-    A basic Nation class used to represent a user's log in.
+    A basic nation class used to represent a user's log in.
     :param nation_name: The nation's name
     :type nation_name: str
     :ivar x_pin: A user's password the server uses for rapid authentication
@@ -53,17 +53,23 @@ class Nation:
         """
         return self.__log_in("X-AutoLogin", password)
 
-    def get_shards(self, shards: Union[List[str], str], get_request: bool = False):
+    def get_shards(self, shards: Union[List[str], str] = None, additional_params: Dict[str, str] = None, get_request: bool = False):
         """
         :param shards: A list of shard names a user wants to find about the nation, a string if only one shard is wanted
-        :param get_request: getting the request or it's contents
+        :param additional_params: Some shards require more parameters, that's the place.
+        :param get_request: getting the request or it's contents.
         :return: A request or its contents
         :rtype: Union[str, requests.request]
         """
+        if additional_params is None:
+            additional_params = {}
+        if shards is None:
+            shards = {}
         if type(shards) is str:
             shards = [shards]
         payloads = {"nation": self.nation_name, "q": "+".join(shards)}
-        res = call_api(parameters=payloads)
+        payloads.update(additional_params)
+        res = call_api(parameters=payloads, headers= {"X-Pin": self.x_pin})
         return res if get_request else str(res.content)
 
     def prepare_command(self, command: str, additional_params:Dict[str, str] = None) -> str:
@@ -105,14 +111,26 @@ class Nation:
         return send_recruitment_telegram(client, tgid, key, self.nation_name)
 
 
-def get_shards(nation_name: str, shards: Union[List[str], str]) -> str:
+def get_shards(nation_name: str, shards: Union[List[str], str] = None, additional_params: Dict[str, str] = None,
+               get_request: bool = False):
+    """
+    :param nation_name: Name of the nation you want the shards of.
+    :param shards: A list of shard names a user wants to find about the nation, a string if only one shard is wanted
+    :param additional_params: Some shards require more parameters, that's the place.
+    :param get_request: getting the request or it's contents.
+    :return: A request or its contents
+    :rtype: Union[str, requests.request]
+    """
+    if additional_params is None:
+        additional_params = {}
+    if shards is None:
+        shards = {}
     if type(shards) is str:
         shards = [shards]
     payloads = {"nation": nation_name, "q": "+".join(shards)}
-    headers = {
-        "User-Agent": userAgent}
-    res = call_api(headers, payloads)
-    return str(res.content)
+    payloads.update(additional_params)
+    res = call_api(parameters=payloads)
+    return res if get_request else str(res.content)
 
 
 def get_nations():
