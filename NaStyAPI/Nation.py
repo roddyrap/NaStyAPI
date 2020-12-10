@@ -69,7 +69,7 @@ class Nation:
             shards = [shards]
         payloads = {"nation": self.nation_name, "q": "+".join(shards)}
         payloads.update(additional_params)
-        res = call_api(parameters=payloads, headers= {"X-Pin": self.x_pin})
+        res = call_api(parameters=payloads, headers={"X-Pin": self.x_pin})
         return res if get_request else str(res.content)
 
     def prepare_command(self, command: str, additional_params:Dict[str, str] = None) -> str:
