@@ -7,9 +7,9 @@ A Python wrapper for the [NationStates](https://www.nationstates.net/) [api](htt
 Works with a rate limit so as not to exceed NationState's API's rate limit.<br/>
 NaStyAPI only handles communication, it does not parse the result in any way!
 [GitHub Link](https://github.com/Nimi142/NaStyAPI)
-## Table of Contensts:
+## Table of Contents:
 - [NaStyAPI - A NationState wrapper](#nastyapi---a-nationstate-wrapper)
-  - [Table of Contensts:](#table-of-contensts)
+  - [Table of Contensts:](#table-of-contents)
   - [Installation](#installation)
   - [Documentation](#documentation)
   - [General Use](#general-use)
@@ -69,4 +69,4 @@ new_dispatch = your_nation.do_command("dispatch", additional_params={"dispatch":
 
 ## How to contribute
 Thank you for looking at this!
-There isn't all that much to do yet, so the best you can do to help is to use it!
+As mentioned earlier, the library does not yet contain meaningful parse functions in the parse module. Any help would be appreciated.
