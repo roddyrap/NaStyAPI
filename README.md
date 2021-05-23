@@ -1,3 +1,4 @@
+# BIG UPDATE IS IN THE MAKING, A LOT IS ABOUT TO CHANGE!
 # NaStyAPI - A NationState wrapper
 ![PyPi status](https://github.com/Nimi142/NaStyAPI/workflows/PyPi%20status/badge.svg)
 [![Documentation Status](https://readthedocs.org/projects/nastyapi/badge/?version=latest)](https://nastyapi.readthedocs.io/en/latest/?badge=latest)
