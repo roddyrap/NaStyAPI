@@ -5,5 +5,5 @@ docs/source/_build/
 NSapi.egg-info
 .idea
 __pycache__
-main.py
+ignored_testing/
 .vscode/
